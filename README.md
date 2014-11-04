@@ -9,7 +9,7 @@ There is a subfolder for each standard or type of (meta-)data. Seminar groups ar
 1. Fork the repo
 2. Add a document
   1. Save it in the respective directory, or create a new directory
-  2. Add the URL and the filename to the INDEX file in the format `http://the.url/tothe?document > filename.ext`. This allows other users to retrieve the original document as well as to insert the same testdataset into their comment databases.
+  2. Add the URL and the filename to the `INDEX` file in the format `http://the.url/tothe?document > filename.ext` (see WMS directory for example). This allows other users to retrieve the original document as well as to insert the same testdataset into their comment databases programatically.
 3. Send a pull request (for a bunch of documents)
 
 ## Catalogs
