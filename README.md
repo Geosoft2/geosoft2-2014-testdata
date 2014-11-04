@@ -9,7 +9,7 @@ There is a subfolder for each standard or type of (meta-)data. Seminar groups ar
 1. Fork the repo
 2. Add a document
   1. Save it in the respective directory, or create a new directory
-  2. Add the URL and the filename to the `INDEX` file in the format `http://the.url/tothe?document > filename.ext` (see WMS directory for example). This allows other users to retrieve the original document as well as to insert the same testdataset into their comment databases programatically.
+  2. Add the URL and the filename to the `INDEX` file in the format `http://the.url/tothe?document > filename.ext` (URL and filename seperated by one greater-than character, see WMS directory for example). This allows other users to retrieve the original document as well as to insert the same testdataset into their comment databases programatically.
 3. Send a pull request (for a bunch of documents)
 
 ## Catalogs
@@ -22,11 +22,13 @@ This is a (to be extended and) somewhat sorted list of websites and resources th
 * http://inspire-geoportal.ec.europa.eu/discovery/
 * http://catalog.data.gov/dataset?q=WMS&sort=score+desc%2C+name+asc
 * http://www.eurogeoss-broker.eu/
+* http://www.giswiki.org/wiki/Web_Map_Service
 * http://geoportal.org/web/guest/geo_home_stp
 * http://www.geoportal.de/DE/Geoportal/geoportal.html?lang=de
 * http://www.opengeospatial.org/blog/2034
 * http://gis.stackexchange.com/questions/34775/is-there-an-exhaustive-searchable-catalog-of-all-gis-web-services-e-g-ogc-wms
 * http://www.skylab-mobilesystems.com/en/wms_serverlist.html
+* https://www.geoportal.nrw.de/
 
 ## Tipps for Implementing the standards-related functions
 
