@@ -20,6 +20,7 @@ This is a (to be extended and) somewhat sorted list of websites and resources th
 * http://gis.stackexchange.com/questions/6345/list-of-available-online-wms-services-weather-land-data-place-names
 * http://geopole.org/
 * http://inspire-geoportal.ec.europa.eu/discovery/
+* http://catalog.data.gov/dataset?q=WMS&sort=score+desc%2C+name+asc
 * http://www.eurogeoss-broker.eu/
 * http://geoportal.org/web/guest/geo_home_stp
 * http://www.geoportal.de/DE/Geoportal/geoportal.html?lang=de
