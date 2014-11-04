@@ -23,6 +23,7 @@ This is a (to be extended and) somewhat sorted list of websites and resources th
 * http://www.eurogeoss-broker.eu/
 * http://geoportal.org/web/guest/geo_home_stp
 * http://www.geoportal.de/DE/Geoportal/geoportal.html?lang=de
+* http://www.opengeospatial.org/blog/2034
 * http://gis.stackexchange.com/questions/34775/is-there-an-exhaustive-searchable-catalog-of-all-gis-web-services-e-g-ogc-wms
 * http://www.skylab-mobilesystems.com/en/wms_serverlist.html
 
