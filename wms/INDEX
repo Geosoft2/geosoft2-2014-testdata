@@ -1,0 +1,1 @@
+http://wsvmapserv.wsv.bund.de/wmsnetze?request=GetCapabilities&service=WMS > 1.xml

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<WMS_Capabilities version="1.3.0" xmlns="http://www.opengis.net/wms" xmlns:sld="http://www.opengis.net/sld" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ms="http://mapserver.gis.umn.edu/mapserver" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd  http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd  http://mapserver.gis.umn.edu/mapserver http://wsvmapserv.wsv.bund.de/wmsnetze?service=WMS&amp;version=1.3.0&amp;request=GetSchemaExtension">
+
+<!-- MapServer version 5.6.9 OUTPUT=GIF OUTPUT=PNG OUTPUT=JPEG OUTPUT=WBMP OUTPUT=SVG SUPPORTS=PROJ SUPPORTS=AGG SUPPORTS=FREETYPE SUPPORTS=ICONV SUPPORTS=WMS_SERVER SUPPORTS=WMS_CLIENT SUPPORTS=WFS_SERVER SUPPORTS=WFS_CLIENT SUPPORTS=WCS_SERVER SUPPORTS=FASTCGI SUPPORTS=THREADS SUPPORTS=GEOS INPUT=EPPL7 INPUT=POSTGIS INPUT=ORACLESPATIAL INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE -->
+
+<Service>
+  <Name>WMS</Name>
+  <Title>Gradnetz Deutschland (DLZ-IT der BVBS)</Title>
+  <Abstract>Gradnetz im Bereich der Bundesrepublik Deutschland. Maßstabsabhängig werden Linien für die Längen- und Breitengrade im Grad- bzw. Minuten-Raster angezeigt. Eine Beschriftung ist über Layer abschaltbar. </Abstract>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>Abteilung II.1</ContactPerson>
+      <ContactOrganization>Bundesanstalt für IT-Dienstleitungen im Geschäftsbereich des Bundesministeriums für Verkehr, Bau und Stadtentwicklung (DLZ-IT BMVBS)</ContactOrganization>
+    </ContactPersonPrimary>
+    <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>Am Ehrenberg 8</Address>
+        <City>Ilmenau</City>
+        <StateOrProvince>Thüringen</StateOrProvince>
+        <PostCode>98693</PostCode>
+        <Country>Deutschland</Country>
+    </ContactAddress>
+      <ContactVoiceTelephone>+49(3677)669-2299</ContactVoiceTelephone>
+  <ContactElectronicMailAddress>gdi-wsv.support@dlz-it-bvbs.bund.de</ContactElectronicMailAddress>
+  </ContactInformation>
+  <AccessConstraints>Die Wasser- und Schifffahrtsverwaltung des Bundes (WSV, www.wsv.de) betreibt eine Geodateninfrastruktur (GDI-WSV). In diesem Rahmen werden auch standardisierte Web-Dienste bereitgestellt. Einige Dienste der GDI-WSV sind im Internet kostenfrei verfügbar. Die WSV übernimmt keine Gewähr für die Richtigkeit und Vollständigkeit der Daten. Die Nutzer müssen bei Verwertungen der Dienste jeglicher Art einen deutlich sichtbaren Quellenvermerk an den Daten/Diensten anbringen: © Wasser- und Schifffahrtsverwaltung des Bundes (www.wsv.de). Eine Weiterleitung der hier angebotenen Dienste wie z.B. WMS (Web Mapping Services) darf nur nach Absprache mit der Bundesanstalt für IT-Dienstleistungen im Geschäftsbereich des BMVBS (DLZ-IT BMVBS, www.dlz-it.de) erfolgen. Die WSV besitzt alle Rechte an den von ihr hergestellten und aktuell gehaltenen Daten. Nur im BVBS-Intranet sichtbare Dienste sind ausschließlich für den Dienstgebrauch vorgesehen.</AccessConstraints>
+  <MaxWidth>2048</MaxWidth>
+  <MaxHeight>2048</MaxHeight>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/gif</Format>
+      <Format>image/png; mode=24bit</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/vnd.wap.wbmp</Format>
+      <Format>image/tiff</Format>
+      <Format>image/svg+xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <sld:DescribeLayer>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:DescribeLayer>
+    <sld:GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/gif</Format>
+      <Format>image/png; mode=24bit</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/vnd.wap.wbmp</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:GetLegendGraphic>
+    <ms:GetStyles>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?"/></Post>
+        </HTTP>
+      </DCPType>
+    </ms:GetStyles>
+  </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <sld:UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0" InlineFeature="0" RemoteWCS="0"/>
+  <Layer>
+    <Name>WmsNetze</Name>
+    <Title>Gradnetz Deutschland (DLZ-IT der BVBS)</Title>
+    <Abstract>Gradnetz im Bereich der Bundesrepublik Deutschland. Maßstabsabhängig werden Linien für die Längen- und Breitengrade im Grad- bzw. Minuten-Raster angezeigt. Eine Beschriftung ist über Layer abschaltbar. </Abstract>
+    <CRS>EPSG:2397</CRS>
+    <CRS>EPSG:2398</CRS>
+    <CRS>EPSG:2399</CRS>
+    <CRS>EPSG:3034</CRS>
+    <CRS>EPSG:3035</CRS>
+    <CRS>EPSG:3395</CRS>
+    <CRS>EPSG:3857</CRS>
+    <CRS>EPSG:4019</CRS>
+    <CRS>EPSG:4258</CRS>
+    <CRS>EPSG:4326</CRS>
+    <CRS>EPSG:25832</CRS>
+    <CRS>EPSG:25833</CRS>
+    <CRS>EPSG:31466</CRS>
+    <CRS>EPSG:31467</CRS>
+    <CRS>EPSG:31468</CRS>
+    <CRS>EPSG:31469</CRS>
+    <CRS>EPSG:900913</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+    <Layer>
+      <Name>GNB</Name>
+      <Title>Gradnetze_Beschriftung</Title>
+      <Abstract>GNB</Abstract>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_v_1</Name>
+        <Title>Gradnetze_Beschriftung_1</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_v_1&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>25000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_h_1</Name>
+        <Title>Gradnetze_Beschriftung_1</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_h_1&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>25000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_v_5</Name>
+        <Title>Gradnetze_Beschriftung_5</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_v_5&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>25000</MinScaleDenominator>
+        <MaxScaleDenominator>100000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_h_5</Name>
+        <Title>Gradnetze_Beschriftung_5</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_h_5&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>25000</MinScaleDenominator>
+        <MaxScaleDenominator>100000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_v_10</Name>
+        <Title>Gradnetze_Beschriftung_10</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_v_10&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>100000</MinScaleDenominator>
+        <MaxScaleDenominator>300000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_h_10</Name>
+        <Title>Gradnetze_Beschriftung_10</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_h_10&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>100000</MinScaleDenominator>
+        <MaxScaleDenominator>300000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_v_30</Name>
+        <Title>Gradnetze_Beschriftung_30</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_v_30&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>300000</MinScaleDenominator>
+        <MaxScaleDenominator>1e+06</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_h_30</Name>
+        <Title>Gradnetze_Beschriftung_30</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_h_30&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>300000</MinScaleDenominator>
+        <MaxScaleDenominator>1e+06</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_v_60</Name>
+        <Title>Gradnetze_Beschriftung_60</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_v_60&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1e+06</MinScaleDenominator>
+        <MaxScaleDenominator>5.5e+06</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>grad_text_h_60</Name>
+        <Title>Gradnetze_Beschriftung_60</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="129" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=grad_text_h_60&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1e+06</MinScaleDenominator>
+        <MaxScaleDenominator>5.5e+06</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>crs-info</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>crs-info</Title>
+        <!-- WARNING: Optional Ex_GeographicBoundingBox could not be established for this layer.  Consider setting the EXTENT in the LAYER object, or wms_extent metadata. Also check that your data exists in the DATA statement -->
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="83" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=crs-info&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+    <Layer>
+      <Name>GN</Name>
+      <Title>Gradnetz</Title>
+      <Abstract>GN</Abstract>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Gradnetz_1</Name>
+        <Title>Gradnetz_1</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="95" height="41">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Gradnetz_1&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>25000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Gradnetz_5</Name>
+        <Title>Gradnetz_5</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="95" height="41">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Gradnetz_5&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>25000</MinScaleDenominator>
+        <MaxScaleDenominator>100000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Gradnetz_10</Name>
+        <Title>Gradnetz_10</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="95" height="41">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Gradnetz_10&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>100000</MinScaleDenominator>
+        <MaxScaleDenominator>300000</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Gradnetz_30</Name>
+        <Title>Gradnetz_30</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="95" height="41">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Gradnetz_30&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>300000</MinScaleDenominator>
+        <MaxScaleDenominator>1e+06</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>Gradnetz_60</Name>
+        <Title>Gradnetz_60</Title>
+        <CRS>EPSG:4326</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>1</westBoundLongitude>
+        <eastBoundLongitude>21</eastBoundLongitude>
+        <southBoundLatitude>41</southBoundLatitude>
+        <northBoundLatitude>61</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:4326" minx="41" miny="1" maxx="61" maxy="21"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="95" height="23">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=Gradnetz_60&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1e+06</MinScaleDenominator>
+        <MaxScaleDenominator>2e+07</MaxScaleDenominator>
+      </Layer>
+    </Layer>
+    <Layer queryable="0" opaque="0" cascaded="0">
+        <Name>copyright</Name>
+<!-- WARNING: Mandatory metadata '..._title' was missing in this context. -->
+        <Title>copyright</Title>
+        <!-- WARNING: Optional Ex_GeographicBoundingBox could not be established for this layer.  Consider setting the EXTENT in the LAYER object, or wms_extent metadata. Also check that your data exists in the DATA statement -->
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="94" height="26">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://wsvmapserv.wsv.bund.de/wmsnetze?version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=copyright&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>
